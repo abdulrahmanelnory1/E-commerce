@@ -49,12 +49,7 @@
             "Modules\\Cart\\Database\\Factories\\": "Modules/Cart/database/factories/",
             "Modules\\Cart\\Database\\Seeders\\": "Modules/Cart/database/seeders/",
             "Modules\\Cart\\Providers\\": "Modules/Cart/Providers/",
-            "Modules\\Cart\\Tests\\": "Modules/Cart/tests/",
-            "Modules\\Frontend\\App\\": "Modules/Frontend/app/",
-            "Modules\\Frontend\\Database\\Factories\\": "Modules/Frontend/database/factories/",
-            "Modules\\Frontend\\Database\\Seeders\\": "Modules/Frontend/database/seeders/",
-            "Modules\\Frontend\\Providers\\": "Modules/Frontend/Providers/",
-            "Modules\\Frontend\\Tests\\": "Modules/Frontend/tests/"
+            "Modules\\Cart\\Tests\\": "Modules/Cart/tests/"
         }
     },
     "autoload-dev": {
