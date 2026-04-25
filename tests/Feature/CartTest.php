@@ -16,7 +16,7 @@ class CartTest extends TestCase
     {
         parent::setUp();
         // create necessary models without factories
-        $category = \App\Models\Category::create(['name' => 'TestCategory']);
+        $category = \Modules\Category\App\Models\Category::create(['name' => 'TestCategory']);
         $sub = SubCategory::create(['name'=>'TestSub','category_id'=>$category->id]);
         Product::create([
             'name' => 'Sample',

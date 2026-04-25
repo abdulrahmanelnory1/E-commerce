@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Category;
+use Modules\Category\App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\Product;
 use App\Models\Image;

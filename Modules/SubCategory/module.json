@@ -1,0 +1,12 @@
+{
+    "name": "SubCategory",
+    "alias": "subcategory",
+    "description": "SubCategory Management Module",
+    "keywords": [],
+    "priority": 1,
+    "requires": ["Category"],
+    "providers": [
+        "Modules\\SubCategory\\Providers\\SubCategoryServiceProvider"
+    ],
+    "files": []
+}

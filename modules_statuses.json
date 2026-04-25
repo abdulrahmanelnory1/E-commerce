@@ -1,0 +1,7 @@
+{
+    "SubCategory": true,
+    "Category": true,
+    "Product": true,
+    "Cart": true,
+    "Frontend": true
+}

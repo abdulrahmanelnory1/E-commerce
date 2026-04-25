@@ -1,0 +1,12 @@
+{
+    "name": "Product",
+    "alias": "product",
+    "description": "Product Management Module",
+    "keywords": [],
+    "priority": 2,
+    "requires": ["SubCategory"],
+    "providers": [
+        "Modules\\Product\\Providers\\ProductServiceProvider"
+    ],
+    "files": []
+}

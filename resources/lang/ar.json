@@ -1,0 +1,21 @@
+{
+    "Dashboard": "لوحة التحكم",
+    "You're logged in!": "لقد قمت بتسجيل الدخول!",
+    "Profile": "الملف الشخصي",
+    "Log Out": "تسجيل الخروج",
+    "Cart": "عربة التسوق",
+    "Shopping Cart": "عربة التسوق",
+    "Product": "المنتج",
+    "Price": "السعر",
+    "Quantity": "الكمية",
+    "Subtotal": "المجموع الفرعي",
+    "Remove": "إزالة",
+    "Total": "الإجمالي",
+    "Clear Cart": "تفريغ العربة",
+    "Proceed to Checkout": "المتابعة للدفع",
+    "Your cart is empty.": "عربة التسوق فارغة.",
+    "Continue Shopping": "متابعة التسوق",
+    "English": "الإنجليزية",
+    "Arabic": "العربية",
+    "Toggle Language": "تبديل اللغة"
+}

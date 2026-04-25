@@ -7,9 +7,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "filament/filament": "*",
         "laravel/framework": "^12.0",
         "laravel/socialite": "^5.25",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "livewire/livewire": "^4.2",
+        "mhmiton/laravel-modules-livewire": "^7.0",
+        "nwidart/laravel-modules": "^13.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -25,7 +29,32 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Modules\\Category\\App\\": "Modules/Category/app/",
+            "Modules\\Category\\Database\\Factories\\": "Modules/Category/database/factories/",
+            "Modules\\Category\\Database\\Seeders\\": "Modules/Category/database/seeders/",
+            "Modules\\Category\\Providers\\": "Modules/Category/Providers/",
+            "Modules\\Category\\Tests\\": "Modules/Category/tests/",
+            "Modules\\SubCategory\\App\\": "Modules/SubCategory/app/",
+            "Modules\\SubCategory\\Database\\Factories\\": "Modules/SubCategory/database/factories/",
+            "Modules\\SubCategory\\Database\\Seeders\\": "Modules/SubCategory/database/seeders/",
+            "Modules\\SubCategory\\Providers\\": "Modules/SubCategory/Providers/",
+            "Modules\\SubCategory\\Tests\\": "Modules/SubCategory/tests/",
+            "Modules\\Product\\App\\": "Modules/Product/app/",
+            "Modules\\Product\\Database\\Factories\\": "Modules/Product/database/factories/",
+            "Modules\\Product\\Database\\Seeders\\": "Modules/Product/database/seeders/",
+            "Modules\\Product\\Providers\\": "Modules/Product/Providers/",
+            "Modules\\Product\\Tests\\": "Modules/Product/tests/",
+            "Modules\\Cart\\App\\": "Modules/Cart/app/",
+            "Modules\\Cart\\Database\\Factories\\": "Modules/Cart/database/factories/",
+            "Modules\\Cart\\Database\\Seeders\\": "Modules/Cart/database/seeders/",
+            "Modules\\Cart\\Providers\\": "Modules/Cart/Providers/",
+            "Modules\\Cart\\Tests\\": "Modules/Cart/tests/",
+            "Modules\\Frontend\\App\\": "Modules/Frontend/app/",
+            "Modules\\Frontend\\Database\\Factories\\": "Modules/Frontend/database/factories/",
+            "Modules\\Frontend\\Database\\Seeders\\": "Modules/Frontend/database/seeders/",
+            "Modules\\Frontend\\Providers\\": "Modules/Frontend/Providers/",
+            "Modules\\Frontend\\Tests\\": "Modules/Frontend/tests/"
         }
     },
     "autoload-dev": {
@@ -52,7 +81,8 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -80,8 +110,14 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
         }
+    },
+    "audit": {
+        "ignore": [
+            "PKSA-5bdf-2x61-v43c"
+        ]
     },
     "minimum-stability": "stable",
     "prefer-stable": true
