@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository implements a full e-commerce application using Laravel 12 and PHP 8.2. It is built with a clean modular architecture that separates feature areas into modules for `Category`, `SubCategory`, `Product`, `Cart`, and `Frontend`.
+This repository implements a full e-commerce application using Laravel 12 and PHP 8.2. It is built with a clean modular architecture that separates feature areas into modules for `Category`, `SubCategory`, `Product` and `Cart`.
 
 The application implements a clean **modular architecture**, separating business domains into independent modules: Category, SubCategory, Product and Cart. The frontend leverages **Livewire** for reactive UI, while **Filament** provides an admin dashboard for product management.
 
@@ -37,8 +37,6 @@ The application implements a clean **modular architecture**, separating business
 - Composer scripts for setup, development, and testing
   
 ---
-
-## Data Model and Relationships
 
 ### Core Models
 
@@ -99,7 +97,7 @@ The application implements a clean **modular architecture**, separating business
    ```bash
    php artisan serve
    ```
-
+   
 ---
 
 ## Technical Stack
