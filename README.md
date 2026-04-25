@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This repository implements a full e-commerce application using Laravel 12 and PHP 8.2. It is built with a clean modular architecture that separates feature areas into modules for `Category`, `SubCategory`, `Product`, and `Cart`.
+This repository implements a full e-commerce application using Laravel 12 and PHP 8.2. It is built with a clean modular architecture that separates feature areas into modules for `Category`, `SubCategory`, `Product`, `Cart`, and `Frontend`.
 
-The application supports an interactive shopping experience using Livewire, a Filament admin product management dashboard, and user account management, including localization support for English and Arabic.
+The application implements a clean **modular architecture**, separating business domains into independent modules: Category, SubCategory, Product and Cart. The frontend leverages **Livewire** for reactive UI, while **Filament** provides an admin dashboard for product management.
 
 ---
 
@@ -33,65 +33,9 @@ The application supports an interactive shopping experience using Livewire, a Fi
 - Session-based cart management with calculated totals
 - Eloquent relationships linking categories, subcategories, products, images, orders, and order items
 - Middleware-protected routes for authenticated and verified users
-- Vite frontend build with Tailwind CSS and Alpine.js
 - Laravel Breeze-style authentication scaffolding with Livewire profile updates
 - Composer scripts for setup, development, and testing
-
----
-
-## Main Features by Module
-
-### Category Module
-
-- Route: `/categories`
-- Livewire component: `Modules\Category\App\Livewire\CategoryList`
-- Category search and list display
-- Uses `Modules\Category\App\Models\Category`
-
-### SubCategory Module
-
-- Route: `/categories/{category}/subcategories`
-- Livewire component: `Modules\SubCategory\App\Livewire\SubCategoryList`
-- Lists subcategories for a selected category
-- Search filtering for subcategories
-- Uses `Modules\SubCategory\App\Models\SubCategory`
-
-### Product Module
-
-- Routes:
-  - `/subcategories/{subCategory}/products`
-  - `/products/{product}`
-- Livewire components:
-  - `Modules\Product\App\Livewire\ProductList`
-  - `Modules\Product\App\Livewire\ProductShow`
-- Product search and add-to-cart functionality
-- Quantity controls for product ordering
-- Product detail view with related category/subcategory display
-- Uses `Modules\Product\App\Models\Product` and `Modules\Product\App\Models\Image`
-
-### Cart Module
-
-- Routes:
-  - `/shop`
-  - `/shop/checkout`
-  - `/shop/orders`
-- Livewire components:
-  - `Modules\Cart\App\Livewire\Shop`
-  - `Modules\Cart\App\Livewire\Checkout`
-  - `Modules\Cart\App\Livewire\Orders`
-- Cart persistence in session
-- Total price calculation for cart contents
-- Quantity update, item removal, and cart clearing
-- Checkout process that writes `Order` and `OrderItem` records
-- Order history retrieval for the authenticated user
-
-### Filament Admin
-
-- Product admin resource: `App\Filament\Resources\ProductResource`
-- Admin pages for listing, creating, editing, and bulk deleting products
-- Form controls for product name, price, description, quantity, subcategory selection, and image URL
-- Table columns for product name, price, quantity, and subcategory name
-
+  
 ---
 
 ## Data Model and Relationships
@@ -105,16 +49,6 @@ The application supports an interactive shopping experience using Livewire, a Fi
 - `Modules\SubCategory\App\Models\SubCategory` - subcategory data
 - `Modules\Product\App\Models\Product` - product catalog entries
 - `Modules\Product\App\Models\Image` - product image records
-
-### Relationships
-
-- `Category` has many `SubCategory`
-- `SubCategory` belongs to `Category`
-- `Product` belongs to `SubCategory`
-- `Product` has many `Image`
-- `Order` belongs to `User`
-- `Order` has many `OrderItem`
-- `OrderItem` belongs to `Product`
 
 ---
 
@@ -168,14 +102,6 @@ The application supports an interactive shopping experience using Livewire, a Fi
 
 ---
 
-## Development Scripts
-
-- `composer setup` - full install, environment file creation, migration, and frontend build
-- `npm run dev` - start Vite development server
-- `composer test` - run application tests
-
----
-
 ## Technical Stack
 
 - PHP 8.2
@@ -189,18 +115,3 @@ The application supports an interactive shopping experience using Livewire, a Fi
 - Alpine.js
 - Axios
 
----
-
-## Developer Notes
-
-- The cart is stored in session and synchronized across Livewire components.
-- Checkout uses `Order` and `OrderItem` models and persists orders for authenticated users.
-- Product data is maintained via Filament admin CRUD for easy backend management.
-- Module-based structure isolates features and makes scaling easier.
-- Search is implemented at the category, subcategory, and product levels.
-
----
-
-## License
-
-This project is released under the MIT License.
